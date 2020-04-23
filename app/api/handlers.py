@@ -1,4 +1,3 @@
-import uvicorn as uvicorn
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
@@ -56,6 +55,3 @@ async def get_stat(project_id, group):
 
 
 
-
-if __name__ == '__main__':
-    uvicorn.run(app)
