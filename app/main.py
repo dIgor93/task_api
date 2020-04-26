@@ -1,4 +1,4 @@
-import uvicorn as uvicorn
+import uvicorn
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
@@ -22,7 +22,7 @@ app.add_middleware(
 
 @app.get('/health')
 async def health():
-    return {"status": "Ok"}
+    return {"status": "Oke"}
 
 
 @app.get('/projects')
@@ -53,9 +53,6 @@ async def get_tasks(project_id, group):
 async def get_stat(project_id, group):
     res = await app.state.res.get_plot_data(project_id, group)
     return res
-
-
-
 
 if __name__ == '__main__':
     uvicorn.run(app)
