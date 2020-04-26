@@ -2,13 +2,14 @@ import uvicorn
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
+from app.config import config
 from app.test_resources import TestResources
 
 app = FastAPI()
 app.state.res = TestResources()
 
 origins = [
-    "http://localhost:8080",
+    config['origin'],
 ]
 
 app.add_middleware(
