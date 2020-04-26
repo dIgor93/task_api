@@ -22,7 +22,7 @@ app.add_middleware(
 
 @app.get('/health')
 async def health():
-    return {"status": "Ok"}
+    return {"status": "Oke"}
 
 
 @app.get('/projects')
