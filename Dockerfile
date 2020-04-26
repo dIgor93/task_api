@@ -12,3 +12,5 @@ RUN pip install -U pip pipenv && pipenv install --system --deploy --ignore-pipfi
 COPY . .
 
 RUN chmod 777 ./entry.sh
+
+CMD ["./entry.sh"]
